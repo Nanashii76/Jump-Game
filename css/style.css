@@ -1,0 +1,96 @@
+* {
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 100%;
+    height: 500px;
+    border-bottom: 20px solid #333;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#2a1a16, #4e3630);
+}
+
+.fire {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: fire-animation 1s infinite linear;
+}
+
+.character{
+    position: absolute;
+    width: 150px;
+    bottom: 0;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.stars {
+    position: absolute;
+    width: 600px;
+    opacity: 0.6;
+    animation: background 20s infinite linear;
+}
+
+.stars2 {
+    position: absolute;
+    width: 300px;
+    opacity: 0.6;
+    animation: background 10s infinite linear;
+}
+
+/* Animação para a bola de fogo ficar em loop*/
+@keyframes fire-animation {
+    from{
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+/* Animação de pulo*/
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    40%{
+        bottom: 180px;
+    }
+    60%{
+        bottom: 180px;
+    }
+    50% {
+        bottom: 180px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes background {
+    from {
+        right: -600px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes background2 {
+    from {
+        right: -300px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+
